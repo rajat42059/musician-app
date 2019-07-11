@@ -27,6 +27,11 @@ app.get('/hello', (req, res) => {
 });
 
 
+app.get('/coffee', (req, res) => {
+  res.send('coffee');
+});
+
+
 
 // initialize store
 const musician = new Musician(store);
