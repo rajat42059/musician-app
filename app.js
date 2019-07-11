@@ -14,9 +14,19 @@ app.use('/musician', musicianRoutes);
 app.use(express.static('public'));
 
 // Index route
-app.get('*', (req, res) => {
+app.get('/67', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
+
+app.get('/test', (req, res) => {
+  res.send('test');
+});
+
+app.get('/hello', (req, res) => {
+  res.send('hello');
+});
+
+
 
 // initialize store
 const musician = new Musician(store);
